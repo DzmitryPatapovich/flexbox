@@ -57,20 +57,35 @@ body
 	background-color: $accent
 	color: #fff
 
-.flex 
- display: flex
- flex-wrap: wrap
- flex-direction: column
- justify-content: center
- 
 
- .item
-  width: 200px
-  height: 200px
-  background: red
-  margin: 20px
-  font-size: 72px
-  flex-grow: 1
+.nav 
+ display: flex
+ justify-content: flex-end; /* разместим справа */
+ background: #6e9cc3
+
+
+.nav a 
+ color: #fff
+ padding: 15px 10px
+ text-decoration: none
+ text-align: center
+
+.nav a:hover 
+ background: #5c8db7 
+
+/* меньше 800px */
+@media all and (max-width: 800px) 
+	.nav 
+	 justify-content: space-around 
+	.nav a 
+	 flex-grow: 1 /* растягиваться на всю ширину */ 
+
+
+/* меньше 500px */
+@media all and (max-width: 500px) 
+	.nav 
+	 flex-direction: column
+
 
   
 
